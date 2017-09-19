@@ -1,11 +1,10 @@
-C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\obj\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.csprojResolveAssemblyReference.cache
-C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\obj\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.csproj.CoreCompileInputs.cache
-C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\obj\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.AssemblyInfoInputs.cache
-C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\obj\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.AssemblyInfo.cs
 C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\bin\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.deps.json
 C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\bin\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.runtimeconfig.json
 C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\bin\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.runtimeconfig.dev.json
 C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\bin\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.dll
 C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\bin\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.pdb
+C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\obj\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.csproj.CoreCompileInputs.cache
+C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\obj\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.AssemblyInfoInputs.cache
+C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\obj\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.AssemblyInfo.cs
 C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\obj\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.dll
 C:\Users\U_M0UZN\source\repos\Alfa_Template_Core1.1_Mongo\Alfa_Template_Core1.1_Mongo\obj\Debug\netcoreapp1.1\Alfa_Template_Core1.1_Mongo.pdb
