@@ -20,7 +20,7 @@ namespace Alfa_Template_Core11_Mongo.Controllers
         {
             if (setting == "init")
             {
-                //_noteRepository.RemoveAllNotes();
+                _noteRepository.RemoveAllNotes();
                 _noteRepository.AddNote(new Note()
                 {
                     Id = "1",

@@ -23,7 +23,15 @@ namespace Alfa_Template_Core11_Mongo
 
         public async Task<IEnumerable<Note>> GetAllNotes()
         {
-            return await _context.Notes.Find(_ => true).ToListAsync();
+            try
+            {
+                return await _context.Notes.Find(_ => true).ToListAsync();
+            }
+            catch(Exception ex)
+            {
+                // throw ex if needed
+                throw;
+            }
         }
 
         public async Task<Note> GetNote(string id)
@@ -32,6 +40,12 @@ namespace Alfa_Template_Core11_Mongo
             return await _context.Notes
                             .Find(filter)
                             .FirstOrDefaultAsync();
+        }
+
+        public async Task<DeleteResult> RemoveAllNotes()
+        {
+            return await _context.Notes.DeleteManyAsync(
+                Builders<Note>.Filter.Empty);
         }
 
         public async Task<DeleteResult> RemoveNote(string id)
@@ -48,6 +62,14 @@ namespace Alfa_Template_Core11_Mongo
                             .CurrentDate(s => s.UpdatedOn);
 
             return await _context.Notes.UpdateOneAsync(filter, update);
+        }
+
+        public async Task<ReplaceOneResult> UpdateNote(string id, Note item)
+        {
+            return await _context.Notes.
+                ReplaceOneAsync(n => n.Id.Equals(id),
+                    item,
+                    new UpdateOptions { IsUpsert = true });
         }
     }
 }
