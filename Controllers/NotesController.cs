@@ -1,5 +1,7 @@
 ﻿using Alfa_Template_Core11_Mongo.Model;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -7,6 +9,7 @@ using System.Threading.Tasks;
 namespace Alfa_Template_Core11_Mongo.Controllers
 {
     [Produces("application/json")]
+    [Consumes("application/json", "multipart/form-data")]
     [Route("api/[controller]")]
     public class NotesController : Controller
     {
@@ -60,6 +63,20 @@ namespace Alfa_Template_Core11_Mongo.Controllers
         public void Delete(string id)
         {
             _noteRepository.RemoveNote(id);
+        }
+
+        // POST api/notes/uploadFile
+        [HttpPost("uploadFile")]
+        public async Task<ObjectId> UploadFile(IFormFile file)
+        {
+            return await _noteRepository.UploadFile(file);
+        }
+
+        // POST api/notes/getFileInfo/234244234
+        [HttpGet("getFileInfo/{id}")]
+        public async Task<String> GetFileInfo(string id)
+        {
+            return await _noteRepository.GetFileInfo(id);
         }
     }
 }

@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 using Alfa_Template_Core11_Mongo.Model;
 using MongoDB.Driver;
 using Microsoft.Extensions.Options;
+using MongoDB.Bson;
+using Microsoft.AspNetCore.Http;
+using MongoDB.Driver.GridFS;
 
 namespace Alfa_Template_Core11_Mongo
 {
@@ -70,6 +73,38 @@ namespace Alfa_Template_Core11_Mongo
                 ReplaceOneAsync(n => n.Id.Equals(id),
                     item,
                     new UpdateOptions { IsUpsert = true });
+        }
+
+        public async Task<ObjectId> UploadFile(IFormFile file)
+        {
+            try
+            {
+                var stream = file.OpenReadStream();
+                var filename = file.FileName;
+                return await _context.Bucket.UploadFromStreamAsync(filename, stream);
+            }
+            catch (Exception ex)
+            {
+                return new ObjectId(ex.ToString());
+            }
+        }
+
+        public async Task<String> GetFileInfo(string id)
+        {
+            GridFSFileInfo info = null;
+            var objectId = new ObjectId(id);
+            try
+            {
+                using (var stream = await _context.Bucket.OpenDownloadStreamAsync(objectId))
+                {
+                    info = stream.FileInfo;
+                }
+                return info.Filename;
+            }
+            catch (Exception)
+            {
+                return "Not Found";
+            }
         }
     }
 }

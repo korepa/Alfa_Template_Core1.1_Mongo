@@ -2,3 +2,6 @@
 *.cache
 obj/Debug/*
 bin/Debug/*
+*.cache
+*.pdb
+*.dll
